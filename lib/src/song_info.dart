@@ -3,8 +3,8 @@ part of flutter_audio_query;
 /// SongInfo class holds all information about a specific song audio file.
 class SongInfo extends DataModel {
   SongInfo._(Map<dynamic, dynamic> map) : super._(map);
-  
-  //Added set functionality.
+
+//Added set functionality.
   // Currently only for 3, but can be easily extended
   void setAlbumTitle(String title) => _data['title'] = title;
   void setAlbumArt(String path) => _data['album_artwork'] = path;
@@ -52,6 +52,8 @@ class SongInfo extends DataModel {
 
   /// Returns a String with a file path to audio data file
   String get filePath => _data['_data'];
+
+  String get uri => _data["uri"];
 
   /// Returns a String with the size, in bytes, of this audio file.
   String get fileSize => _data['_size'];
